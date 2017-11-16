@@ -13,7 +13,11 @@ function reverse(str) {
   // const reversedString = reversedSplitString.join('');
   // return reversedString;
   
-  return str.split('').reverse().join('');
+  // return str.split('').reverse().join('');
+  
+  // Stephen's alternative
+  return str.split('')
+    .reduce((rev, char) => char + rev, '');
 }
 
 function esrever(str) {
