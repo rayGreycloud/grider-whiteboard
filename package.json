@@ -1,0 +1,19 @@
+{
+  "name": "grider-whiteboard",
+  "version": "1.0.0",
+  "description": "exercises from grider course",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayGreycloud/grider-whiteboard.git"
+  },
+  "author": "rayGreycloud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rayGreycloud/grider-whiteboard/issues"
+  },
+  "homepage": "https://github.com/rayGreycloud/grider-whiteboard#readme"
+}
