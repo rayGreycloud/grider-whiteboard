@@ -16,8 +16,7 @@ function chunk(array, size) {
     if (array.length < size) {
       size = array.length;
     }
-    let chunk = array.splice(0, size);
-    chunked.push(chunk); 
+    chunked.push(array.splice(0, size));
   }
   
   // Instructor's solution #1
