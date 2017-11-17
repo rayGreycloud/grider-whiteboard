@@ -10,7 +10,8 @@
 
 function chunk(array, size) {
   let chunked = [];
-  
+
+  // My solution
   while (array.length > 0) {
     if (array.length < size) {
       size = array.length;
@@ -18,6 +19,24 @@ function chunk(array, size) {
     let chunk = array.splice(0, size);
     chunked.push(chunk); 
   }
+  
+  // Instructor's solution #1
+  // for (let element in array) {
+  //   const last = chunked[chunked.length - 1];
+  // 
+  //   if (!last }} last.length === size) {
+  //     chunked.push([element]);
+  //   } else {
+  //     last.push(element);
+  //   }
+  // }
+  
+  // Instructor's solution #2
+  // let index = 0;
+  // while (index < array.length) {
+  //   chunked.push(array.slice(index, index + size));
+  //   index += size;
+  // }
   
   return chunked;
 }
