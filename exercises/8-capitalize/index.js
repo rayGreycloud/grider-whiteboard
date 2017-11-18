@@ -7,16 +7,49 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
+// My refactor of instructor's solution #2
+// Eliminates accessing string like array 
+// Warned against by WC3
 function capitalize(str) {
-  const words = [];
+  let result = str.charAt(0).toUpperCase();
 
-  for (let word of str.split(' ')) {
-    words.push(word[0].toUpperCase() + word.slice(1));
+  for (let i = 1; i < str.length; i++) {
+    if (str.charAt(i - 1) === ' ') {
+      result += str.charAt(i).toUpperCase();
+    } else {
+      result += str.charAt(i);
+    }
   }
-
-  return words.join(' ');
+  
+  return result;
 }
-
+ 
+// Instructor's solution #2
+// function capitalize(str) {
+//   let result = str.charAt(0).toUpperCase();
+// 
+//   for (let i = 1; i < str.length; i++) {
+//     if (str[i - 1] === ' ') {
+//       result += str[i].toUpperCase();
+//     } else {
+//       result += str[i];
+//     }
+//   }
+// 
+//   return result;
+// }
+ 
+// Instructor's solution #1
+// function capitalize(str) {
+//   const words = [];
+// 
+//   for (let word of str.split(' ')) {
+//     words.push(word[0].toUpperCase() + word.slice(1));
+//   }
+// 
+//   return words.join(' ');
+// }
+ 
 // My solution
 // function capitalize(str) {
 //   const words = [];  
