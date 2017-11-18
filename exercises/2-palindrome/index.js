@@ -12,7 +12,7 @@
 //   return str === str.split('').reverse().join('');  
 // }
 
-// Refactored solution
+// Refactored solution ** RECOMMENDED
 const palindrome = str => str === str.split('').reverse().join('');
 
 // grider's alternate but not best solution

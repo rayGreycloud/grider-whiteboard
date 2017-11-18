@@ -39,7 +39,7 @@ function capitalize(str) {
 //   return result;
 // }
  
-// Instructor's solution #1
+// Instructor's solution #1 **RECOMMENDED
 // function capitalize(str) {
 //   const words = [];
 // 

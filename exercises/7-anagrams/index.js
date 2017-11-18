@@ -8,7 +8,7 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-// Solution #2 
+// Solution #2  **RECOMMENDED
 function anagrams(stringA, stringB) {
   return cleanString(stringA) === cleanString(stringB);
 }

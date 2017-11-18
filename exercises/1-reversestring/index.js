@@ -15,7 +15,7 @@ function reverse(str) {
   
   // return str.split('').reverse().join('');
   
-  // Stephen's alternative
+  // Stephen's alternative **RECOMMENDED
   return str.split('')
     .reduce((rev, char) => char + rev, '');
 }

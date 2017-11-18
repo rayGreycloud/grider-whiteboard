@@ -30,7 +30,7 @@ function chunk(array, size) {
   //   }
   // }
   
-  // Instructor's solution #2
+  // Instructor's solution #2 **RECOMMENDED
   // let index = 0;
   // while (index < array.length) {
   //   chunked.push(array.slice(index, index + size));

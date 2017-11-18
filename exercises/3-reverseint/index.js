@@ -17,6 +17,7 @@ function reverseInt(n) {
   // 
   // return integer * sign;
   
+  // **RECOMMENDED
   return parseInt(n.toString().split('').reverse().join('')) * Math.sign(n);
 }
 
