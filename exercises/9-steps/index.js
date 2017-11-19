@@ -18,9 +18,27 @@
 //       '####'
 
 // Recursive solution 
-function steps(n) {
-
-
+// Add needed info and default values for recursive call 
+function steps(n, row = 0, stair = '') {
+  // base case - end function
+  if (n === row) { return; }
+  
+  // if reached end of stair, print it
+  if (n === stair.length) {
+    console.log(stair);
+    // call stair with incremented row
+    // starting new stair so default value for stair
+    steps(n, row + 1);
+    return;
+  }
+  
+  if (stair.length <= row) {
+    stair += '#';
+  } else {
+    stair += ' ';
+  }
+  // Continue row, pass in current stair
+  steps(n, row, stair);
 }
 
 // RECOMMENDED
