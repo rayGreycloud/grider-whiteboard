@@ -8,16 +8,38 @@
 // Example:
 //   fib(4) === 3
 
-// Recursive solution
+// Memoizer function
+function memoize(fn) {
+  // initialize cache
+  const cache = {};
+  // spread arguments 
+  return function(...args) {
+    // check cache for prior call with same arguments
+    if (cache[args]) {
+      // if found, return prior result
+      return cache[args];
+    }
+    // otherwise call fn with context and args
+    const result = fn.apply(this, args);
+    // store the result in cache object
+    cache[args] = result;
+    // return result
+    return result;
+  };
+}
+
 function fib(n) {
-  // n < 2 means no sequencing needed
   if (n < 2) { return n; }
-  
+
   let currentEntry = n - 1;
   let preceedingEntry = n - 2;
-  
+
   return fib(currentEntry) + fib(preceedingEntry);
 }
+
+fib = memoize(fib);
+
+module.exports = fib;
 
 // Iterative solution
 // function fib(n) {
@@ -33,4 +55,3 @@ function fib(n) {
 //   return result[n];
 // }
 
-module.exports = fib;
