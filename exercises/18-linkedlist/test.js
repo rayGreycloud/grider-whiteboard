@@ -147,11 +147,12 @@ describe('InsertLast', () => {
   });
 });
 
-describe.skip('GetAt', () => {
+describe('GetAt', () => {
   test('returns the node at given index', () => {
     const l = new List();
     expect(l.getAt(10)).toEqual(null);
-
+    expect(l.getAt(-12)).toEqual(null);
+    
     l.insertLast(1);
     l.insertLast(2);
     l.insertLast(3);
