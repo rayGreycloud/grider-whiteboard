@@ -11,6 +11,22 @@
 //    list.insertLast('d');
 //    fromLast(list, 2).data // 'b'
 
-function fromLast(list, n) {}
+function fromLast(list, n) {
+  let first = list.getFirst();
+  let second = list.getFirst();
+  
+  // move second pointer by n spaces
+  while (n > 0) {
+    second = second.next;
+    n--;
+  }
+  // advance second to end of list
+  while (second.next) {
+    first = first.next;
+    second = second.next;
+  }
+  // when second at end, first points at answer
+  return first;
+}
 
 module.exports = fromLast;
