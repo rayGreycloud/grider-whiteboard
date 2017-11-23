@@ -12,6 +12,20 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
-function midpoint(list) {}
+function midpoint(list) {
+  // initialize trackers to first node in list
+  let slow = list.getFirst();
+  let fast = list.getFirst();
+  
+  // check if next two nodes exist
+  while (fast.next && fast.next.next) {
+    // move slow one node
+    slow = slow.next;
+    // move fast two nodes
+    fast = fast.next.next;
+  }
+  // when while loop completes, slow points at midpoint
+  return slow;  
+}
 
 module.exports = midpoint;
